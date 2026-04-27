@@ -58,23 +58,20 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-white" style={{ fontFamily: "'Golos Text', sans-serif" }}>
+    <div className="min-h-screen bg-white" style={{ fontFamily: "'Golos Text', sans-serif", "--brand": "hsl(134,65%,35%)" } as React.CSSProperties}>
 
       {/* NAVBAR */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: "hsl(213,85%,40%)" }}>
-              <Icon name="Sparkles" size={18} className="text-white" />
-            </div>
-            <span className="font-bold text-lg text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>ЧистоДом</span>
+          <div className="flex items-center">
+            <img src="https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/bucket/ca1ba208-8e4f-40bb-91d8-ffb1ebcc00a9.jpg" alt="ПроЧистка" className="h-12 w-12 rounded-full object-cover shadow-sm" />
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
-            <a href="#services" className="hover:text-blue-600 transition-colors">Услуги</a>
-            <a href="#portfolio" className="hover:text-blue-600 transition-colors">Портфолио</a>
-            <a href="#contacts" className="hover:text-blue-600 transition-colors">Контакты</a>
+            <a href="#services" className="hover:text-green-600 transition-colors">Услуги</a>
+            <a href="#portfolio" className="hover:text-green-600 transition-colors">Портфолио</a>
+            <a href="#contacts" className="hover:text-green-600 transition-colors">Контакты</a>
           </nav>
-          <a href="#contacts" className="hidden md:inline-flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors" style={{ background: "hsl(213,85%,40%)" }}>
+          <a href="#contacts" className="hidden md:inline-flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors" style={{ background: "hsl(134,65%,35%)" }}>
             <Icon name="Phone" size={15} />
             Вызвать мастера
           </a>
@@ -87,7 +84,7 @@ export default function Index() {
             <a href="#services" className="text-gray-700 font-medium" onClick={() => setMenuOpen(false)}>Услуги</a>
             <a href="#portfolio" className="text-gray-700 font-medium" onClick={() => setMenuOpen(false)}>Портфолио</a>
             <a href="#contacts" className="text-gray-700 font-medium" onClick={() => setMenuOpen(false)}>Контакты</a>
-            <a href="#contacts" className="inline-flex items-center gap-2 text-white font-semibold px-5 py-3 rounded-xl justify-center" style={{ background: "hsl(213,85%,40%)" }}>
+            <a href="#contacts" className="inline-flex items-center gap-2 text-white font-semibold px-5 py-3 rounded-xl justify-center" style={{ background: "hsl(134,65%,35%)" }}>
               <Icon name="Phone" size={16} />
               Вызвать мастера
             </a>
@@ -96,35 +93,35 @@ export default function Index() {
       </header>
 
       {/* HERO */}
-      <section className="pt-24 pb-20 px-4 sm:px-6" style={{ background: "linear-gradient(135deg, #fff 0%, #eff6ff 50%, #e0f2fe 100%)" }}>
+      <section className="pt-24 pb-20 px-4 sm:px-6" style={{ background: "linear-gradient(135deg, #fff 0%, #f0fdf4 50%, #dcfce7 100%)" }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up">
-              <div className="mb-6 inline-flex items-center gap-3 bg-blue-50 px-4 py-2 rounded-full text-blue-600 text-sm font-semibold">
+              <div className="mb-6 inline-flex items-center gap-3 bg-green-50 px-4 py-2 rounded-full text-green-700 text-sm font-semibold">
                 <Icon name="MapPin" size={14} />
                 Выезд по всему городу
               </div>
               <h1 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 Химчистка мебели<br />
-                <span style={{ color: "hsl(213,85%,40%)" }}>на дому</span>
+                <span style={{ color: "hsl(134,65%,35%)" }}>на дому</span>
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 Профессиональная чистка диванов, кресел, матрасов и ковров. Современное оборудование, безопасная химия, результат виден сразу.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="#contacts" className="inline-flex items-center gap-2 text-white font-bold px-7 py-3.5 rounded-xl transition-all hover:scale-105 shadow-lg shadow-blue-200" style={{ background: "hsl(213,85%,40%)" }}>
+                <a href="#contacts" className="inline-flex items-center gap-2 text-white font-bold px-7 py-3.5 rounded-xl transition-all hover:scale-105 shadow-lg shadow-green-200" style={{ background: "hsl(134,65%,35%)" }}>
                   <Icon name="CalendarCheck" size={18} />
                   Записаться на чистку
                 </a>
-                <a href="tel:+79001234567" className="inline-flex items-center gap-2 border-2 border-gray-200 text-gray-800 font-semibold px-7 py-3.5 rounded-xl hover:border-blue-500 hover:text-blue-600 transition-all">
+                <a href="tel:+79001234567" className="inline-flex items-center gap-2 border-2 border-gray-200 text-gray-800 font-semibold px-7 py-3.5 rounded-xl hover:border-green-500 hover:text-green-700 transition-all">
                   <Icon name="Phone" size={18} />
                   +7 (900) 123-45-67
                 </a>
               </div>
             </div>
             <div className="relative animate-fade-in">
-              <div className="mb-4 border-2 border-dashed border-blue-200 rounded-2xl p-4 text-center bg-blue-50/50">
-                <p className="text-sm text-blue-400 font-medium">📷 Здесь будет ваш логотип или фото</p>
+              <div className="mb-4 flex justify-center">
+                <img src="https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/bucket/ca1ba208-8e4f-40bb-91d8-ffb1ebcc00a9.jpg" alt="ПроЧистка — химчистка мебели" className="h-32 w-32 rounded-full object-cover shadow-xl" />
               </div>
               <div className="rounded-3xl overflow-hidden shadow-2xl shadow-blue-100/60">
                 <img src={SOFA_IMG} alt="Химчистка дивана" className="w-full object-cover" style={{ aspectRatio: "4/3" }} />
@@ -145,7 +142,7 @@ export default function Index() {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((s, i) => (
               <div key={i} className="bg-white rounded-2xl border border-gray-100 p-5 text-center shadow-sm hover:shadow-md transition-shadow">
-                <p className="text-3xl font-black" style={{ fontFamily: "'Montserrat', sans-serif", color: "hsl(213,85%,40%)" }}>{s.value}</p>
+                <p className="text-3xl font-black" style={{ fontFamily: "'Montserrat', sans-serif", color: "hsl(134,65%,35%)" }}>{s.value}</p>
                 <p className="text-gray-500 text-sm mt-1">{s.label}</p>
               </div>
             ))}
@@ -157,7 +154,7 @@ export default function Index() {
       <section id="services" className="py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <span className="inline-block bg-blue-50 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Наши услуги</span>
+            <span className="inline-block bg-green-50 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Наши услуги</span>
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>Что мы чистим</h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">Работаем с любой мягкой мебелью и напольными покрытиями</p>
           </div>
@@ -174,12 +171,12 @@ export default function Index() {
           </div>
 
           {/* CTA Banner */}
-          <div className="mt-10 rounded-3xl p-8 md:p-10 text-white flex flex-col md:flex-row items-center justify-between gap-6" style={{ background: "linear-gradient(135deg, hsl(213,85%,40%) 0%, hsl(213,85%,28%) 100%)" }}>
+          <div className="mt-10 rounded-3xl p-8 md:p-10 text-white flex flex-col md:flex-row items-center justify-between gap-6" style={{ background: "linear-gradient(135deg, hsl(134,65%,35%) 0%, hsl(134,65%,25%) 100%)" }}>
             <div>
               <h3 className="text-2xl font-black mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Не знаете, отмоется ли?</h3>
-              <p className="text-blue-100">Звоните — бесплатно оценим сложность работы</p>
+              <p className="text-green-100">Звоните — бесплатно оценим сложность работы</p>
             </div>
-            <a href="tel:+79001234567" className="shrink-0 inline-flex items-center gap-2 bg-white font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors shadow-lg whitespace-nowrap" style={{ color: "hsl(213,85%,40%)" }}>
+            <a href="tel:+79001234567" className="shrink-0 inline-flex items-center gap-2 bg-white font-bold px-7 py-3.5 rounded-xl hover:bg-green-50 transition-colors shadow-lg whitespace-nowrap" style={{ color: "hsl(134,65%,35%)" }}>
               <Icon name="Phone" size={18} />
               Позвонить
             </a>
@@ -191,14 +188,14 @@ export default function Index() {
       <section id="portfolio" className="py-20 px-4 sm:px-6 bg-gray-50/60">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <span className="inline-block bg-blue-50 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Портфолио</span>
+            <span className="inline-block bg-green-50 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Портфолио</span>
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>Примеры работ</h2>
             <p className="text-gray-500 mt-3">Фото до и после — реальные результаты наших клиентов</p>
           </div>
 
-          <div className="mb-8 border-2 border-dashed border-blue-200 rounded-2xl p-6 text-center bg-blue-50/40">
-            <Icon name="ImagePlus" size={32} className="text-blue-300 mx-auto mb-2" />
-            <p className="text-blue-400 font-medium">📸 Здесь разместите ваши реальные фото работ</p>
+          <div className="mb-8 border-2 border-dashed border-green-200 rounded-2xl p-6 text-center bg-green-50/40">
+            <Icon name="ImagePlus" size={32} className="text-green-300 mx-auto mb-2" />
+            <p className="text-green-500 font-medium">📸 Здесь разместите ваши реальные фото работ</p>
             <p className="text-gray-400 text-sm mt-1">Напишите мне, и я помогу добавить ваши изображения</p>
           </div>
 
@@ -229,13 +226,13 @@ export default function Index() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block bg-blue-50 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Почему мы</span>
+              <span className="inline-block bg-green-50 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Почему мы</span>
               <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>Чисто. Быстро.<br />С гарантией.</h2>
               <div className="space-y-5">
                 {whyUs.map((item, i) => (
                   <div key={i} className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                      <Icon name={item.icon} size={18} className="text-blue-600" fallback="Check" />
+                    <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
+                      <Icon name={item.icon} size={18} className="text-green-700" fallback="Check" />
                     </div>
                     <div>
                       <p className="font-bold text-gray-900">{item.title}</p>
@@ -264,7 +261,7 @@ export default function Index() {
       <section id="contacts" className="py-20 px-4 sm:px-6 bg-gray-50/60">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <span className="inline-block bg-blue-50 text-blue-600 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Контакты</span>
+            <span className="inline-block bg-green-50 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Контакты</span>
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>Оставьте заявку</h2>
             <p className="text-gray-500 mt-3">Перезвоним в течение 10 минут</p>
           </div>
@@ -279,8 +276,7 @@ export default function Index() {
                     value={form.name}
                     onChange={e => setForm({ ...form, name: e.target.value })}
                     placeholder="Иван Иванов"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all text-gray-900"
-                    style={{ focusBorderColor: "hsl(213,85%,40%)" } as React.CSSProperties}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-100 transition-all text-gray-900"
                     required
                   />
                 </div>
@@ -291,7 +287,7 @@ export default function Index() {
                     value={form.phone}
                     onChange={e => setForm({ ...form, phone: e.target.value })}
                     placeholder="+7 (___) ___-__-__"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all text-gray-900"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-100 transition-all text-gray-900"
                     required
                   />
                 </div>
@@ -300,7 +296,7 @@ export default function Index() {
                   <select
                     value={form.service}
                     onChange={e => setForm({ ...form, service: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all text-gray-900 bg-white"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-100 transition-all text-gray-900 bg-white"
                   >
                     <option value="">Выберите услугу</option>
                     <option>Чистка дивана / кресла</option>
@@ -317,10 +313,10 @@ export default function Index() {
                     onChange={e => setForm({ ...form, message: e.target.value })}
                     placeholder="Опишите задачу: размер, материал, пятна..."
                     rows={3}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-100 transition-all text-gray-900 resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-100 transition-all text-gray-900 resize-none"
                   />
                 </div>
-                <button type="submit" className="w-full text-white font-bold py-3.5 rounded-xl transition-colors shadow-lg shadow-blue-200 flex items-center justify-center gap-2" style={{ background: "hsl(213,85%,40%)" }}>
+                <button type="submit" className="w-full text-white font-bold py-3.5 rounded-xl transition-colors shadow-lg shadow-green-200 flex items-center justify-center gap-2" style={{ background: "hsl(134,65%,35%)" }}>
                   <Icon name="Send" size={17} />
                   Отправить заявку
                 </button>
@@ -331,13 +327,13 @@ export default function Index() {
             <div className="space-y-5">
               {contacts.map((c, i) => (
                 <div key={i} className="bg-white rounded-2xl border border-gray-100 p-5 flex items-center gap-4 hover:shadow-md transition-shadow">
-                  <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                    <Icon name={c.icon} size={20} className="text-blue-600" fallback="Info" />
+                  <div className="w-11 h-11 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
+                    <Icon name={c.icon} size={20} className="text-green-700" fallback="Info" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 font-medium uppercase tracking-wide">{c.label}</p>
                     {c.href ? (
-                      <a href={c.href} className="font-bold text-gray-900 hover:text-blue-600 transition-colors">{c.value}</a>
+                      <a href={c.href} className="font-bold text-gray-900 hover:text-green-700 transition-colors">{c.value}</a>
                     ) : (
                       <p className="font-bold text-gray-900">{c.value}</p>
                     )}
@@ -346,7 +342,7 @@ export default function Index() {
                 </div>
               ))}
 
-              <div className="rounded-2xl p-6 text-white" style={{ background: "linear-gradient(135deg, hsl(213,85%,40%) 0%, hsl(213,85%,28%) 100%)" }}>
+              <div className="rounded-2xl p-6 text-white" style={{ background: "linear-gradient(135deg, hsl(134,65%,35%) 0%, hsl(134,65%,25%) 100%)" }}>
                 <div className="flex items-start gap-3">
                   <Icon name="Gift" size={22} className="shrink-0 mt-0.5" />
                   <div>
@@ -364,12 +360,10 @@ export default function Index() {
       <footer className="bg-gray-900 text-white py-10 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "hsl(213,85%,40%)" }}>
-              <Icon name="Sparkles" size={15} className="text-white" />
-            </div>
-            <span className="font-bold" style={{ fontFamily: "'Montserrat', sans-serif" }}>ЧистоДом</span>
+            <img src="https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/bucket/ca1ba208-8e4f-40bb-91d8-ffb1ebcc00a9.jpg" alt="ПроЧистка" className="h-9 w-9 rounded-full object-cover" />
+            <span className="font-bold" style={{ fontFamily: "'Montserrat', sans-serif" }}>ПроЧистка</span>
           </div>
-          <p className="text-gray-400 text-sm">© 2025 ЧистоДом. Профессиональная химчистка мебели</p>
+          <p className="text-gray-400 text-sm">© 2025 ПроЧистка. Профессиональная химчистка мебели</p>
           <nav className="flex gap-5 text-sm text-gray-400">
             <a href="#services" className="hover:text-white transition-colors">Услуги</a>
             <a href="#portfolio" className="hover:text-white transition-colors">Работы</a>
