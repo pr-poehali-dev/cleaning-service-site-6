@@ -45,7 +45,7 @@ const steps = [
 const contacts = [
   { icon: "Phone", label: "Телефон", value: "+7 (984) 139-65-65", href: "tel:+79841396565", hint: "Звонки и WhatsApp" },
   { icon: "Mail", label: "Email", value: "prochistka65@gmail.com", href: "mailto:prochistka65@gmail.com", hint: "Ответим за 1 час" },
-  { icon: "Clock", label: "Режим работы", value: "Пн–Вс, 8:00 – 22:00", href: null, hint: "Без выходных" },
+  { icon: "Clock", label: "Режим работы", value: "Пн–Сб, 9:00 – 21:00", href: null, hint: "Воскресенье — выходной" },
   { icon: "MapPin", label: "Зона выезда", value: "Южно-Сахалинск, Корсаков, Долинск, Анива", href: null, hint: "Выезд по городу и области" },
 ];
 
