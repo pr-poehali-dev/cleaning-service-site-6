@@ -52,11 +52,24 @@ const contacts = [
 export default function Index() {
   const [form, setForm] = useState({ name: "", phone: "", service: "", message: "" });
   const [menuOpen, setMenuOpen] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Спасибо! Мы свяжемся с вами в ближайшее время.");
-    setForm({ name: "", phone: "", service: "", message: "" });
+    setSending(true);
+    try {
+      await fetch("https://functions.poehali.dev/9b06bd83-908e-482f-86c7-724d281dac12", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      setSent(true);
+      setForm({ name: "", phone: "", service: "", message: "" });
+      setTimeout(() => setSent(false), 5000);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -311,10 +324,11 @@ export default function Index() {
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-100 transition-all text-gray-900 resize-none"
                   />
                 </div>
-                <button type="submit" className="w-full text-white font-bold py-3.5 rounded-xl transition-colors shadow-lg shadow-green-200 flex items-center justify-center gap-2" style={{ background: "hsl(134,65%,35%)" }}>
-                  <Icon name="Send" size={17} />
-                  Отправить заявку
+                <button type="submit" disabled={sending} className="w-full text-white font-bold py-3.5 rounded-xl transition-colors shadow-lg shadow-green-200 flex items-center justify-center gap-2 disabled:opacity-70" style={{ background: "hsl(134,65%,35%)" }}>
+                  <Icon name={sending ? "Loader" : sent ? "CheckCircle" : "Send"} size={17} className={sending ? "animate-spin" : ""} />
+                  {sending ? "Отправляем..." : sent ? "Заявка отправлена!" : "Отправить заявку"}
                 </button>
+                {sent && <p className="text-green-600 text-sm text-center font-medium">✓ Мы получили вашу заявку и скоро перезвоним</p>}
                 <p className="text-gray-400 text-xs text-center">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
               </form>
             </div>
