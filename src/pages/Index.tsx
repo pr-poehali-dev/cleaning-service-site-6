@@ -41,7 +41,7 @@ const steps = [
 ];
 
 const contacts = [
-  { icon: "Phone", label: "Телефон", value: "+7 (900) 123-45-67", href: "tel:+79001234567", hint: "Звонки и WhatsApp" },
+  { icon: "Phone", label: "Телефон", value: "+7 (984) 139-65-65", href: "tel:+79841396565", hint: "Звонки и WhatsApp" },
   { icon: "Mail", label: "Email", value: "info@chistodom.ru", href: "mailto:info@chistodom.ru", hint: "Ответим за 1 час" },
   { icon: "Clock", label: "Режим работы", value: "Пн–Вс, 8:00 – 22:00", href: null, hint: "Без выходных" },
   { icon: "MapPin", label: "Зона выезда", value: "Москва и МО", href: null, hint: "Выезд от 30 км МКАД" },
@@ -112,9 +112,9 @@ export default function Index() {
                   <Icon name="CalendarCheck" size={18} />
                   Записаться на чистку
                 </a>
-                <a href="tel:+79001234567" className="inline-flex items-center gap-2 border-2 border-gray-200 text-gray-800 font-semibold px-7 py-3.5 rounded-xl hover:border-green-500 hover:text-green-700 transition-all">
+                <a href="tel:+79841396565" className="inline-flex items-center gap-2 border-2 border-gray-200 text-gray-800 font-semibold px-7 py-3.5 rounded-xl hover:border-green-500 hover:text-green-700 transition-all">
                   <Icon name="Phone" size={18} />
-                  +7 (900) 123-45-67
+                  +7 (984) 139-65-65
                 </a>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function Index() {
               <h3 className="text-2xl font-black mb-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Не знаете, отмоется ли?</h3>
               <p className="text-green-100">Звоните — бесплатно оценим сложность работы</p>
             </div>
-            <a href="tel:+79001234567" className="shrink-0 inline-flex items-center gap-2 bg-white font-bold px-7 py-3.5 rounded-xl hover:bg-green-50 transition-colors shadow-lg whitespace-nowrap" style={{ color: "hsl(134,65%,35%)" }}>
+            <a href="tel:+79841396565" className="shrink-0 inline-flex items-center gap-2 bg-white font-bold px-7 py-3.5 rounded-xl hover:bg-green-50 transition-colors shadow-lg whitespace-nowrap" style={{ color: "hsl(134,65%,35%)" }}>
               <Icon name="Phone" size={18} />
               Позвонить
             </a>
