@@ -44,7 +44,7 @@ const contacts = [
   { icon: "Phone", label: "Телефон", value: "+7 (984) 139-65-65", href: "tel:+79841396565", hint: "Звонки и WhatsApp" },
   { icon: "Mail", label: "Email", value: "prochistka65@gmail.com", href: "mailto:prochistka65@gmail.com", hint: "Ответим за 1 час" },
   { icon: "Clock", label: "Режим работы", value: "Пн–Вс, 8:00 – 22:00", href: null, hint: "Без выходных" },
-  { icon: "MapPin", label: "Зона выезда", value: "Москва и МО", href: null, hint: "Выезд от 30 км МКАД" },
+  { icon: "MapPin", label: "Зона выезда", value: "Южно-Сахалинск, Корсаков, Долинск, Анива", href: null, hint: "Выезд по городу и области" },
 ];
 
 export default function Index() {
@@ -99,7 +99,7 @@ export default function Index() {
             <div className="animate-slide-up">
               <div className="mb-6 inline-flex items-center gap-3 bg-green-50 px-4 py-2 rounded-full text-green-700 text-sm font-semibold">
                 <Icon name="MapPin" size={14} />
-                Выезд по всему городу
+                Южно-Сахалинск, Корсаков, Долинск, Анива
               </div>
               <h1 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 <span style={{ color: "hsl(134,65%,35%)" }}>ПроЧистка</span> — химчистка мебели на дому
