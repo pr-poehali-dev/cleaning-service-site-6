@@ -14,7 +14,7 @@ const services = [
 
 const portfolio = [
   { img: "https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/bucket/31a266ff-1819-4d90-9a1a-020149269146.jpg", title: "Угловой диван", tag: "Пятно выведено полностью" },
-  { img: SOFA_IMG, title: "Ковёр шерстяной", tag: "Площадь 12 м²" },
+  { img: "https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/bucket/0f225d6a-7024-4635-b8ea-b1f05c0a0906.jpg", title: "Матрас", tag: "Жёлтые пятна выведены" },
   { img: SOFA_IMG, title: "Кресло велюр", tag: "Потемнение + запах" },
 ];
 
