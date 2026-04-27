@@ -102,8 +102,7 @@ export default function Index() {
                 Выезд по всему городу
               </div>
               <h1 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-6" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-                Химчистка мебели<br />
-                <span style={{ color: "hsl(134,65%,35%)" }}>на дому</span>
+                <span style={{ color: "hsl(134,65%,35%)" }}>ПроЧистка</span> — химчистка мебели на дому
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 Профессиональная чистка диванов, кресел, матрасов и ковров. Современное оборудование, безопасная химия, результат виден сразу.
