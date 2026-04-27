@@ -13,7 +13,7 @@ const services = [
 ];
 
 const portfolio = [
-  { img: SOFA_IMG, title: "Диван угловой", tag: "Удалено: кофе + жир" },
+  { img: "https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/bucket/31a266ff-1819-4d90-9a1a-020149269146.jpg", title: "Угловой диван", tag: "Пятно выведено полностью" },
   { img: SOFA_IMG, title: "Ковёр шерстяной", tag: "Площадь 12 м²" },
   { img: SOFA_IMG, title: "Кресло велюр", tag: "Потемнение + запах" },
 ];
@@ -190,12 +190,6 @@ export default function Index() {
             <span className="inline-block bg-green-50 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Портфолио</span>
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>Примеры работ</h2>
             <p className="text-gray-500 mt-3">Фото до и после — реальные результаты наших клиентов</p>
-          </div>
-
-          <div className="mb-8 border-2 border-dashed border-green-200 rounded-2xl p-6 text-center bg-green-50/40">
-            <Icon name="ImagePlus" size={32} className="text-green-300 mx-auto mb-2" />
-            <p className="text-green-500 font-medium">📸 Здесь разместите ваши реальные фото работ</p>
-            <p className="text-gray-400 text-sm mt-1">Напишите мне, и я помогу добавить ваши изображения</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
