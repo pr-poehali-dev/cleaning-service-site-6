@@ -16,6 +16,7 @@ const portfolio = [
   { img: "https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/bucket/31a266ff-1819-4d90-9a1a-020149269146.jpg", title: "Угловой диван", tag: "Пятно выведено полностью" },
   { img: "https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/bucket/0f225d6a-7024-4635-b8ea-b1f05c0a0906.jpg", title: "Матрас", tag: "Жёлтые пятна выведены" },
   { img: "https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/bucket/188e4d82-f470-41f8-87ad-204b6d9057a3.jpg", title: "Угловой диван рогожка", tag: "Загрязнения и пятна" },
+  { img: "https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/bucket/44316bde-ce6a-4524-a189-5fb8118a0d66.jpg", title: "Стулья велюр", tag: "Сильные загрязнения" },
 ];
 
 const stats = [
