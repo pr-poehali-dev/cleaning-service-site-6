@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const SOFA_IMG = "https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/bucket/e5c56985-b63f-43cb-bd89-92d9876b7cfd.png";
+const SOFA_IMG = "https://cdn.poehali.dev/projects/05871acc-a901-40aa-b7c5-d02b3231e89b/files/6877e265-24bc-4e6f-b6a9-9792e03374e2.jpg";
 
 const services = [
   { icon: "Sofa", title: "Диваны и кресла", desc: "Глубокая чистка мягкой мебели любых тканей — бархат, велюр, рогожка, кожа", color: "bg-blue-50 text-blue-600" },
