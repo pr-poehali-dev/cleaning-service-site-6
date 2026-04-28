@@ -270,94 +270,34 @@ export default function Index() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <span className="inline-block bg-green-50 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Контакты</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>Оставьте заявку</h2>
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900" style={{ fontFamily: "'Montserrat', sans-serif" }}>Свяжитесь с нами</h2>
             <p className="text-gray-500 mt-3">Перезвоним в течение 10 минут</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="bg-white rounded-3xl border border-gray-100 p-8 shadow-sm">
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">Ваше имя</label>
-                  <input
-                    type="text"
-                    value={form.name}
-                    onChange={e => setForm({ ...form, name: e.target.value })}
-                    placeholder="Иван Иванов"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-100 transition-all text-gray-900"
-                    required
-                  />
+          <div className="max-w-2xl mx-auto space-y-5">
+            {contacts.map((c, i) => (
+              <div key={i} className="bg-white rounded-2xl border border-gray-100 p-5 flex items-center gap-4 hover:shadow-md transition-shadow">
+                <div className="w-11 h-11 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
+                  <Icon name={c.icon} size={20} className="text-green-700" fallback="Info" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">Телефон</label>
-                  <input
-                    type="tel"
-                    value={form.phone}
-                    onChange={e => setForm({ ...form, phone: e.target.value })}
-                    placeholder="+7 (___) ___-__-__"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-100 transition-all text-gray-900"
-                    required
-                  />
+                  <p className="text-xs text-gray-400 font-medium uppercase tracking-wide">{c.label}</p>
+                  {c.href ? (
+                    <a href={c.href} className="font-bold text-gray-900 hover:text-green-700 transition-colors">{c.value}</a>
+                  ) : (
+                    <p className="font-bold text-gray-900">{c.value}</p>
+                  )}
+                  <p className="text-xs text-gray-400 mt-0.5">{c.hint}</p>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">Услуга</label>
-                  <select
-                    value={form.service}
-                    onChange={e => setForm({ ...form, service: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-100 transition-all text-gray-900 bg-white"
-                  >
-                    <option value="">Выберите услугу</option>
-                    <option>Чистка дивана / кресла</option>
-                    <option>Чистка матраса</option>
-                    <option>Чистка ковра</option>
-                    <option>Выведение пятен</option>
-                    <option>Другое</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">Комментарий (необязательно)</label>
-                  <textarea
-                    value={form.message}
-                    onChange={e => setForm({ ...form, message: e.target.value })}
-                    placeholder="Опишите задачу: размер, материал, пятна..."
-                    rows={3}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-100 transition-all text-gray-900 resize-none"
-                  />
-                </div>
-                <button type="submit" disabled={sending} className="w-full text-white font-bold py-3.5 rounded-xl transition-colors shadow-lg shadow-green-200 flex items-center justify-center gap-2 disabled:opacity-70" style={{ background: "hsl(134,65%,35%)" }}>
-                  <Icon name={sending ? "Loader" : sent ? "CheckCircle" : "Send"} size={17} className={sending ? "animate-spin" : ""} />
-                  {sending ? "Отправляем..." : sent ? "Заявка отправлена!" : "Отправить заявку"}
-                </button>
-                {sent && <p className="text-green-600 text-sm text-center font-medium">✓ Мы получили вашу заявку и скоро перезвоним</p>}
-                <p className="text-gray-400 text-xs text-center">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
-              </form>
-            </div>
+              </div>
+            ))}
 
-            <div className="space-y-5">
-              {contacts.map((c, i) => (
-                <div key={i} className="bg-white rounded-2xl border border-gray-100 p-5 flex items-center gap-4 hover:shadow-md transition-shadow">
-                  <div className="w-11 h-11 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
-                    <Icon name={c.icon} size={20} className="text-green-700" fallback="Info" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-400 font-medium uppercase tracking-wide">{c.label}</p>
-                    {c.href ? (
-                      <a href={c.href} className="font-bold text-gray-900 hover:text-green-700 transition-colors">{c.value}</a>
-                    ) : (
-                      <p className="font-bold text-gray-900">{c.value}</p>
-                    )}
-                    <p className="text-xs text-gray-400 mt-0.5">{c.hint}</p>
-                  </div>
-                </div>
-              ))}
-
-              <div className="rounded-2xl p-6 text-white" style={{ background: "linear-gradient(135deg, hsl(134,65%,35%) 0%, hsl(134,65%,25%) 100%)" }}>
-                <div className="flex items-start gap-3">
-                  <Icon name="Gift" size={22} className="shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-bold text-lg">Первый заказ — скидка 10%</p>
-                    <p className="text-blue-100 text-sm mt-1">Укажите при звонке или в заявке «хочу скидку»</p>
-                  </div>
+            <div className="rounded-2xl p-6 text-white" style={{ background: "linear-gradient(135deg, hsl(134,65%,35%) 0%, hsl(134,65%,25%) 100%)" }}>
+              <div className="flex items-start gap-3">
+                <Icon name="Gift" size={22} className="shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-lg">Первый заказ — скидка 10%</p>
+                  <p className="text-green-100 text-sm mt-1">Укажите при звонке «хочу скидку»</p>
                 </div>
               </div>
             </div>
