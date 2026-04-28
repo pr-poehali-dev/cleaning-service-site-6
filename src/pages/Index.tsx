@@ -86,9 +86,9 @@ export default function Index() {
             <a href="#portfolio" className="hover:text-green-600 transition-colors">Портфолио</a>
             <a href="#contacts" className="hover:text-green-600 transition-colors">Контакты</a>
           </nav>
-          <a href="#contacts" className="hidden md:inline-flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors" style={{ background: "hsl(134,65%,35%)" }}>
+          <a href="tel:+79841396565" className="hidden md:inline-flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors" style={{ background: "hsl(134,65%,35%)" }}>
             <Icon name="Phone" size={15} />
-            Вызвать мастера
+            Позвонить
           </a>
           <button className="md:hidden p-2" onClick={() => setMenuOpen(!menuOpen)}>
             <Icon name={menuOpen ? "X" : "Menu"} size={22} className="text-gray-700" />
@@ -99,9 +99,9 @@ export default function Index() {
             <a href="#services" className="text-gray-700 font-medium" onClick={() => setMenuOpen(false)}>Услуги</a>
             <a href="#portfolio" className="text-gray-700 font-medium" onClick={() => setMenuOpen(false)}>Портфолио</a>
             <a href="#contacts" className="text-gray-700 font-medium" onClick={() => setMenuOpen(false)}>Контакты</a>
-            <a href="#contacts" className="inline-flex items-center gap-2 text-white font-semibold px-5 py-3 rounded-xl justify-center" style={{ background: "hsl(134,65%,35%)" }}>
+            <a href="tel:+79841396565" className="inline-flex items-center gap-2 text-white font-semibold px-5 py-3 rounded-xl justify-center" style={{ background: "hsl(134,65%,35%)" }}>
               <Icon name="Phone" size={16} />
-              Вызвать мастера
+              Позвонить
             </a>
           </div>
         )}
